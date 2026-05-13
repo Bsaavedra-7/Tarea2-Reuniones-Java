@@ -1,5 +1,6 @@
 package cl.tarea2.model.reunion;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -31,4 +32,17 @@ public abstract class Reunion {
         this.asistentes = new ArrayList<>();
         this.notas = new ArrayList<>();
     }
+
+    public void iniciar() {
+        horaInicio = LocalTime.now();
+    }
+
+    public void finalizar() {
+        horaFin = LocalTime.now();
+    }
+
+    public float calcularTiempoReal(){
+        return (float) Duration.between(horaInicio, horaFin).toMinutes();
+    }
+
 }
