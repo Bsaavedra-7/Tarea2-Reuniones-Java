@@ -16,7 +16,7 @@ public abstract class Reunion {
     private LocalTime horaFin;
     private Empleado organizador;
     private int duracionPrevista;
-    private List<Participante> invitados;
-    private List<Participante> asistentes;
+    private List<Invitacion> invitados;
+    private List<Asistencia> asistentes;
     private List<Nota> notas;
 }
