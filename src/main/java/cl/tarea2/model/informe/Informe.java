@@ -5,6 +5,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.io.IOException;
+import cl.tarea2.model.reunion.*; //Importa todas las clases de reunion
+import java.util.List;
 
-public class informe {
+public class Informe {
+    public Informe(Reunion ri) {//ri es acronimo de reunion informe
+
+    }
 }
