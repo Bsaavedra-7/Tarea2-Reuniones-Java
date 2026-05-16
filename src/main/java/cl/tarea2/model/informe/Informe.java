@@ -9,7 +9,15 @@ import cl.tarea2.model.reunion.*; //Importa todas las clases de reunion
 import java.util.List;
 
 public class Informe {
-    public Informe(Reunion ri) {//ri es acronimo de reunion informe
+    public Informe(Reunion ref, String nombreReunion) {//ref es la referencia a la reunion
+        //El informe debe proporcionar al menos:
+// Fecha y hora de la reunión
+// Horas de inicio y fin, y duración total
+// Información sobre el tipo de reunión
+// Enlace o sala
+// Lista de participantes y información sobre retrasos
+// Todas las notas relacionadas con la reunión (ordenadas
+//ronológicamente)
 
     }
 }
