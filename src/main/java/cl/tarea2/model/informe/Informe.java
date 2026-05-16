@@ -32,5 +32,9 @@ public class Informe {
         //Por lo tanto hemos de convertirlos a String, sin embargo, este proceso puede ser "peligroso"
         //Por ello, ha futuro hemos de considerar manjear excepciones aqui, es decir, usar un try
 
+        tiempoReal = String.valueOf(ref.calcularTiempoReal());
+        totalAsistencias = String.valueOf(ref.obtenerTotalAsistencia());
+        porcentajeAsistencias = String.valueOf(ref.obtenerPorcentajeAsistencia());
+
     }
 }
