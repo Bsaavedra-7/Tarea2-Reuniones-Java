@@ -52,5 +52,8 @@ public abstract class Reunion {
     public LocalTime obtenerHora(){
         return this.hora;
     }
-
+    
+    public LocalTime obtenerHoraInicio(){
+        return this.horaInicio;
+    }
 }
