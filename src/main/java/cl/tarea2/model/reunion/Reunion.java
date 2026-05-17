@@ -49,4 +49,8 @@ public abstract class Reunion {
         return this.fecha;
     }
 
+    public LocalTime obtenerHora(){
+        return this.hora;
+    }
+
 }
