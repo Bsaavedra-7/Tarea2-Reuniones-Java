@@ -38,6 +38,9 @@ public class Informe {
         tiempoReal = String.valueOf(ref.calcularTiempoReal());
         totalAsistencias = String.valueOf(ref.obtenerTotalAsistencia());
         porcentajeAsistencias = String.valueOf(ref.obtenerPorcentajeAsistencia());
-
+        hora = String.valueOf(ref.obtenerHora());
+        horaInicio = String.valueOf(ref.obtenerHoraInicio());
+        horaFin = String.valueOf(ref.obtenerHoraFin());
+        fecha = String.valueOf(ref.obtenerFecha());
     }
 }
