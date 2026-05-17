@@ -18,9 +18,9 @@ public class Informe {
 // Todas las notas relacionadas con la reunión (ordenadas
 //cronológicamente)
 
-    String tiempoReal;
-    String totalAsistencias;
-    String porcentajeAsistencias;
+    private String tiempoReal;
+    private String totalAsistencias;
+    private String porcentajeAsistencias;
 
 
 
