@@ -21,7 +21,10 @@ public class Informe {
     private String tiempoReal;
     private String totalAsistencias;
     private String porcentajeAsistencias;
-
+    private String fecha;
+    private String hora;
+    private String horaInicio;
+    private String horaFin;
 
 
 
