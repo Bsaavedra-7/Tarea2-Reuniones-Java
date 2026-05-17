@@ -45,4 +45,8 @@ public abstract class Reunion {
         return (float) Duration.between(horaInicio, horaFin).toMinutes();
     }
 
+    public LocalDate obtenerFecha(){
+        return this.fecha;
+    }
+
 }
