@@ -25,7 +25,7 @@ public class ManejarArchivos{
     	Files.write(ruta, informacion.getBytes(), StandardOpenOption.APPEND); //Y escribimos la informacion    	
     }
 
-    public void resetearArchivo(){
+    public void vaciarArchivo(){
         Files.write(ruta, "".getBytes()); //Sin el StandardOpenOption.APPEND esto re-escribe lo que tenia el archivo
     }
 }

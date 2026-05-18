@@ -63,7 +63,7 @@ public class Informe {
     }
 
     public void vaciarInforme(){
-        archivoInforme.resetearArchivo();
+        archivoInforme.vaciarArchivo();
     }
 
 }
