@@ -41,7 +41,8 @@ public class Informe {
         fecha = String.valueOf(ref.obtenerFecha());
         this.nombreReunion = nombreReunion;
         //Intentar asignar la direccion de la carpeta en donde se quiere crear el archivo
-        this.nombreDirectorio = Paths.get("./" + nombreReunion);
+        this.nombreDirectorio = Paths.get("./" + nombreReunion + ".txt");
     }
+
 
 }
