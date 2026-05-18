@@ -1,10 +1,7 @@
 package cl.tarea2.model.informe;
 import cl.tarea2.model.persona.Empleado;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.io.IOException;
+import java.nio.file.*;
+import java.io.*;
 import cl.tarea2.model.reunion.*; //Importa todas las clases de reunion
 import java.util.List;
 
@@ -25,8 +22,8 @@ public class Informe {
     private String hora;
     private String horaInicio;
     private String horaFin;
-
-
+    private String nombreReunion;
+    private Path nombreDirectorio;
 
     public Informe(Reunion ref, String nombreReunion) {//ref es la referencia a la reunion
 
@@ -42,5 +39,9 @@ public class Informe {
         horaInicio = String.valueOf(ref.obtenerHoraInicio());
         horaFin = String.valueOf(ref.obtenerHoraFin());
         fecha = String.valueOf(ref.obtenerFecha());
+
+        //Intentar asignar la direccion de la carpeta en donde se quiere crear el archivo
+        //Esto puede dar excepciones
+        this.nombreDirectorio = Paths.get("./" + nombreReunion);
     }
 }
