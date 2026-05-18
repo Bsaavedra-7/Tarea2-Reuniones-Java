@@ -76,4 +76,10 @@ public class Informe {
         escribirInforme(); //Hacemos que el informe se escriba de nuevo
     }
 
+    public void manejarAsistencias(List<String> listaAManejar){//copiar cada elemento de una lista a informacionAsistencia
+        for (String elementoLista : listaAManejar){
+            informacionAsistencia.add(elementoLista);
+        }
+    }
+
 }
