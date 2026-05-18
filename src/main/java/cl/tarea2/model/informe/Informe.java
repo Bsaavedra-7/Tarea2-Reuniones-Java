@@ -44,5 +44,8 @@ public class Informe {
         this.nombreDirectorio = Paths.get("./" + nombreReunion + ".txt");
     }
 
+    public void crearNuevoInforme(){
+
+    }
 
 }
