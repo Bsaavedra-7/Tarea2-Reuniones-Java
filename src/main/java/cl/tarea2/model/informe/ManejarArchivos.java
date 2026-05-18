@@ -19,4 +19,9 @@ public class ManejarArchivos{
         Files.createFile(ruta); //Creamos el archivo
         Files.write(ruta, nombreReunion.getBytes());
     }
+
+    public void escribir(String informacion){
+    	informacion = informacion + "\n"; //Agregamos un salto de linea
+    	Files.write(ruta, informacion.getBytes(), StandardOpenOption.APPEND); //Y escribimos la informacion    	
+    }
 }
