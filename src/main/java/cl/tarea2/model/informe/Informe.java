@@ -45,7 +45,8 @@ public class Informe {
     }
 
     public void crearNuevoInforme(){
-
+        Files.createFile(nombreDirectorio); //Creamos el archivo
+        Files.write(nombreDirectorio, nombreReunion.getBytes());
     }
 
 }
