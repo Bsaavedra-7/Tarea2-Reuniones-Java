@@ -27,6 +27,7 @@ public class ManejarArchivos{
     public void escribirLista(List<String> lista){
     	for (String elementoLista : lista){
     		Files.write(ruta, elementoLista.getBytes(), StandardOpenOption.APPEND); //Escribimos todos los String de la lista 	
+        	Files.write(ruta, "\n".getBytes());
     	}
     }
 
