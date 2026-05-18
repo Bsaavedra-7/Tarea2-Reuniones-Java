@@ -60,7 +60,10 @@ public class Informe {
         archivoInforme.escribir("");//Salto de linea
         archivoInforme.escribir("Lista de personas que asistieron: ");
 
+    }
 
+    public void vaciarInforme(){
+        archivoInforme.resetearArchivo();
     }
 
 }
