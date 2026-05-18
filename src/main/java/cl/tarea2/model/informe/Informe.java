@@ -48,4 +48,19 @@ public class Informe {
         archivoInforme.crearNuevoArchivo();//Creamos el archivo
     }
 
+    public void escribirInforme(){
+        archivoInforme.escribir("Fecha: " + fecha);
+        archivoInforme.escribir("Hora de inicio: " + horaInicio);
+        archivoInforme.escribir("Hora de fin de la reunion: " + horaFin;
+        archivoInforme.escribir("Hora: " + hora); //??? revisar
+        archivoInforme.escribir("");//Salto de linea
+        archivoInforme.escribir("Duracion de la reunion: " + tiempoReal);
+        archivoInforme.escribir("Total de asistencias a la reunion: " + totalAsistencias);
+        archivoInforme.escribir("Porcentaje de asistencias a la reunion: " + porcentajeAsistencias);
+        archivoInforme.escribir("");//Salto de linea
+        archivoInforme.escribir("Lista de personas que asistieron: ");
+
+
+    }
+
 }
