@@ -45,7 +45,7 @@ public class Informe {
     }
 
     public void crearNuevoInforme(){
-         //Creamos el archivo
+        archivoInforme.crearNuevoArchivo();//Creamos el archivo
     }
 
 }
