@@ -25,6 +25,7 @@ public class Informe {
     private String nombreReunion;
     private ManejarArchivos archivoInforme;
     private List<String> informacionAsistencia;
+    private List<String> listaNotas;
     public Informe(Reunion ref, String nombreReunion) {//ref es la referencia a la reunion
 
 //-------------------------------------------------------------
@@ -43,7 +44,7 @@ public class Informe {
 
         this.archivoInforme = new ManejarArchivos();
 
-        //********** Falta iniciar informacionAsistencia
+        //********** Falta iniciar informacionAsistencia y listaNotas
 
     }
 
@@ -63,6 +64,7 @@ public class Informe {
         archivoInforme.escribir("");//Salto de linea
         archivoInforme.escribir("Lista de personas que asistieron: ");
         archivoInforme.escribirLista(informacionAsistencia);
+        archivoInforme.escribirLista(listaNotas);
     }
 
     public void vaciarInforme(){
