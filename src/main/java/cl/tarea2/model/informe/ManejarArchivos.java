@@ -24,6 +24,11 @@ public class ManejarArchivos{
     	informacion = informacion + "\n"; //Agregamos un salto de linea
     	Files.write(ruta, informacion.getBytes(), StandardOpenOption.APPEND); //Y escribimos la informacion    	
     }
+    public void escribirLista(List<String> lista){
+    	for (String elementoLista : lista){
+    		Files.write(ruta, elementoLista.getBytes(), StandardOpenOption.APPEND); //Escribimos todos los String de la lista 	
+    	}
+    }
 
     public void vaciarArchivo(){
         Files.write(ruta, "".getBytes()); //Sin el StandardOpenOption.APPEND esto re-escribe lo que tenia el archivo
