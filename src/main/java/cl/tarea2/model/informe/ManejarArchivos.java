@@ -24,4 +24,8 @@ public class ManejarArchivos{
     	informacion = informacion + "\n"; //Agregamos un salto de linea
     	Files.write(ruta, informacion.getBytes(), StandardOpenOption.APPEND); //Y escribimos la informacion    	
     }
+
+    public void resetearArchivo(){
+        Files.write(ruta, "".getBytes()); //Sin el StandardOpenOption.APPEND esto re-escribe lo que tenia el archivo
+    }
 }
