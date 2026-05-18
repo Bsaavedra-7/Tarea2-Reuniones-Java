@@ -6,15 +6,17 @@ import cl.tarea2.model.reunion.*; //Importa todas las clases de reunion
 import java.util.List;
 
 public class ManejarArchivos{
-    private Path nombreDirectorio;
-	public ManejarArchivos(String nombreDirectorio){
+    private Path ruta;
+    private String nombreReunion;
+	public ManejarArchivos(String nombreReunion){
+		this.nombreReunion = nombreReunion;
 		//Intentar asignar la direccion de la carpeta en donde se quiere crear el archivo
-        this.nombreDirectorio = Paths.get("./" + nombreReunion + ".txt");
+        this.ruta = Paths.get("./" + nombreReunion + ".txt");
 
 	}
 
     public void crearNuevoArchivo(){
-        Files.createFile(nombreDirectorio); //Creamos el archivo
-        Files.write(nombreDirectorio, nombreReunion.getBytes());
+        Files.createFile(ruta); //Creamos el archivo
+        Files.write(ruta, nombreReunion.getBytes());
     }
 }
