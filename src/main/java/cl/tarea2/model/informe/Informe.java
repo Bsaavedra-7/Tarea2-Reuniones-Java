@@ -39,9 +39,9 @@ public class Informe {
         horaInicio = String.valueOf(ref.obtenerHoraInicio());
         horaFin = String.valueOf(ref.obtenerHoraFin());
         fecha = String.valueOf(ref.obtenerFecha());
-
+        this.nombreReunion = nombreReunion;
         //Intentar asignar la direccion de la carpeta en donde se quiere crear el archivo
-        //Esto puede dar excepciones
         this.nombreDirectorio = Paths.get("./" + nombreReunion);
     }
+
 }
