@@ -23,8 +23,7 @@ public class Informe {
     private String horaInicio;
     private String horaFin;
     private String nombreReunion;
-    private Path nombreDirectorio;
-
+    private ManejarArchivos archivoInforme;
     public Informe(Reunion ref, String nombreReunion) {//ref es la referencia a la reunion
 
 //-------------------------------------------------------------
@@ -40,13 +39,13 @@ public class Informe {
         horaFin = String.valueOf(ref.obtenerHoraFin());
         fecha = String.valueOf(ref.obtenerFecha());
         this.nombreReunion = nombreReunion;
-        //Intentar asignar la direccion de la carpeta en donde se quiere crear el archivo
-        this.nombreDirectorio = Paths.get("./" + nombreReunion + ".txt");
+
+        this.archivoInforme = new ManejarArchivos();
+
     }
 
     public void crearNuevoInforme(){
-        Files.createFile(nombreDirectorio); //Creamos el archivo
-        Files.write(nombreDirectorio, nombreReunion.getBytes());
+         //Creamos el archivo
     }
 
 }
