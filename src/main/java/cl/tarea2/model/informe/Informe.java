@@ -69,4 +69,9 @@ public class Informe {
         archivoInforme.vaciarArchivo();
     }
 
+    public void reescribirInforme(){
+        archivoInforme.vaciarArchivo();
+        escribirInforme(); //Hacemos que el informe se escriba de nuevo
+    }
+
 }
