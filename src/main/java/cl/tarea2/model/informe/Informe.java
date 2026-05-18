@@ -24,6 +24,7 @@ public class Informe {
     private String horaFin;
     private String nombreReunion;
     private ManejarArchivos archivoInforme;
+    private List<String> informacionAsistencia;
     public Informe(Reunion ref, String nombreReunion) {//ref es la referencia a la reunion
 
 //-------------------------------------------------------------
@@ -42,6 +43,8 @@ public class Informe {
 
         this.archivoInforme = new ManejarArchivos();
 
+        //********** Falta iniciar informacionAsistencia
+
     }
 
     public void crearNuevoInforme(){
@@ -59,7 +62,7 @@ public class Informe {
         archivoInforme.escribir("Porcentaje de asistencias a la reunion: " + porcentajeAsistencias);
         archivoInforme.escribir("");//Salto de linea
         archivoInforme.escribir("Lista de personas que asistieron: ");
-
+        archivoInforme.escribirLista(informacionAsistencia);
     }
 
     public void vaciarInforme(){
