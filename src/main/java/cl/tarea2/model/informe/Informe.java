@@ -49,6 +49,16 @@ public class Informe {
 
         //********** Falta iniciar informacionAsistencia y listaNotas
 
+
+        //PRIMERO VEAMOS LA LISTA CON NOTAS :)
+        //Guardamos el contenido de cada nota y las enumeramos.
+        List<Nota> listaNotasTemporal = ref.getNotas(); //No es necesario gardar la referencia
+        int contadorNotas = 0;
+        for (Nota elementoLista : listaNotasTemporal){
+            contadorNotas+=1;
+            listaNotas.add("Nota numero " + String.valueOf(contadorNotas) + " : " elementoLista.getContenido());
+        }
+
     }
 
     public void crearNuevoInforme(){
@@ -58,6 +68,10 @@ public class Informe {
     public void escribirInforme(){
         archivoInforme.escribir("1.- Datos relacionados a la fecha y hora de la reunion.");
         archivoInforme.escribir("");//Salto de linea
+
+        //IMPORTANTE:
+        //           reunion tiene un metodo toString que indica fecha, hora, tipo, duracionPrevista...
+        //           PERO el formato no es el ideal, a futuro, considerar cambiar el formato del toString y/o cambiar esta parte para usarlo
 
         archivoInforme.escribir("  - Fecha: " + fecha);
         archivoInforme.escribir("  - Hora esperada: " + hora); //??? revisar
