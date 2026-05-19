@@ -68,6 +68,15 @@ public class Informe {
             listaNotas.add(String.valueOf(contadorNotas) + ") " elementoLista.getPaticipante().getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
         }
 
+        List<Participante> listaAusentesTemporal = ref.obtenerAusencias();
+        informacionAsistencia.add("Personas que a pesar de ser invitadas no atendieron a la reunion: ");
+
+        contador = 0;
+        for (Nota elementoLista : listaAusentesTemporal){
+            contador+=1;
+            listaNotas.add(String.valueOf(contadorNotas) + ") " elementoLista.getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
+        }
+
     }
 
     public void crearNuevoInforme(){
