@@ -68,8 +68,21 @@ public class Informe {
         contador = 0;
         for (Nota elementoLista : listaAsistenciasTemporal){
             contador+=1;
-            listaNotas.add(String.valueOf(contadorNotas) + ") " elementoLista.getPaticipante().getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
+            informacionAsistencia.add(String.valueOf(contador) + ") " elementoLista.getPaticipante().getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
         }
+
+
+        List<Asistencia> listaRetrasosTemporal = ref.obtenerRetrasos();
+        informacionAsistencia.add("Personas que atendieron pero no a tiempo a la reunion: ");
+
+        contador = 0;
+        for (Nota elementoLista : listaRetrasosTemporal){
+            contador+=1;
+            informacionAsistencia.add(String.valueOf(contador) + ") " elementoLista.getPaticipante().getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
+            informacionAsistencia.add("Hora del retraso: " elementoLsta.getRetraso().toString();
+        }
+
+
 
         List<Participante> listaAusentesTemporal = ref.obtenerAusencias();
         informacionAsistencia.add("Personas que a pesar de ser invitadas no atendieron a la reunion: ");
@@ -77,7 +90,7 @@ public class Informe {
         contador = 0;
         for (Nota elementoLista : listaAusentesTemporal){
             contador+=1;
-            listaNotas.add(String.valueOf(contadorNotas) + ") " elementoLista.getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
+            informacionAsistencia.add(String.valueOf(contador) + ") " elementoLista.getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
         }
 
     }
