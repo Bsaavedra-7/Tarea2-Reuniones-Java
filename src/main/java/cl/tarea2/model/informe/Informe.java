@@ -53,10 +53,19 @@ public class Informe {
         //PRIMERO VEAMOS LA LISTA CON NOTAS :)
         //Guardamos el contenido de cada nota y las enumeramos.
         List<Nota> listaNotasTemporal = ref.getNotas(); //No es necesario gardar la referencia
-        int contadorNotas = 0;
+        int contador = 0;
         for (Nota elementoLista : listaNotasTemporal){
-            contadorNotas+=1;
+            contador+=1;
             listaNotas.add("Nota numero " + String.valueOf(contadorNotas) + " : " elementoLista.getContenido());
+        }
+
+        List<Asistencia> listaAsistenciasTemporal = ref.getAsistentes();
+        informacionAsistencia.add("Personas que atendieron a la reunion: ");
+
+        contador = 0;
+        for (Nota elementoLista : listaAsistenciasTemporal){
+            contador+=1;
+            listaNotas.add(String.valueOf(contadorNotas) + ") " elementoLista.getPaticipante().getNombreCompleto() + "/n" + "    Correo: " + elementoLista.getPaticipante().getCorreo);
         }
 
     }
