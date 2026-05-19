@@ -23,6 +23,7 @@ public class Informe {
     private String horaInicio;
     private String horaFin;
     private String nombreReunion;
+    private String duracionPrevista;
     private ManejarArchivos archivoInforme;
     private List<String> informacionAsistencia;
     private List<String> listaNotas;
@@ -40,6 +41,8 @@ public class Informe {
         horaInicio = String.valueOf(ref.obtenerHoraInicio());
         horaFin = String.valueOf(ref.obtenerHoraFin());
         fecha = String.valueOf(ref.obtenerFecha());
+        duracionPrevista = String.valueOf(ref.getDuracionPrevista());
+
         this.nombreReunion = nombreReunion;
 
         this.archivoInforme = new ManejarArchivos();
@@ -53,16 +56,23 @@ public class Informe {
     }
 
     public void escribirInforme(){
-        archivoInforme.escribir("Fecha: " + fecha);
-        archivoInforme.escribir("Hora de inicio: " + horaInicio);
-        archivoInforme.escribir("Hora de fin de la reunion: " + horaFin;
-        archivoInforme.escribir("Hora: " + hora); //??? revisar
+        archivoInforme.escribir("1.- Datos relacionados a la fecha y hora de la reunion.");
         archivoInforme.escribir("");//Salto de linea
-        archivoInforme.escribir("Duracion de la reunion: " + tiempoReal);
-        archivoInforme.escribir("Total de asistencias a la reunion: " + totalAsistencias);
-        archivoInforme.escribir("Porcentaje de asistencias a la reunion: " + porcentajeAsistencias);
+
+        archivoInforme.escribir("  - Fecha: " + fecha);
+        archivoInforme.escribir("  - Hora esperada: " + hora); //??? revisar
+        archivoInforme.escribir("  - Hora de inicio real: " + horaInicio);
+        archivoInforme.escribir("  - Hora de fin: " + horaFin;
         archivoInforme.escribir("");//Salto de linea
-        archivoInforme.escribir("Lista de personas que asistieron: ");
+        archivoInforme.escribir("  - Duracion esperada de la reunion: " + duracionPrevista);
+        archivoInforme.escribir("  - Duracion real de la reunion: " + tiempoReal);
+        archivoInforme.escribir("");//Salto de linea
+
+        archivoInforme.escribir("2.- Datos relacionados a la asistencia de la reunion.");
+        archivoInforme.escribir("  - Total de asistencias a la reunion: " + totalAsistencias);
+        archivoInforme.escribir("  - Porcentaje de asistencias a la reunion: " + porcentajeAsistencias);
+        archivoInforme.escribir("");//Salto de linea
+        archivoInforme.escribir("  - Lista de personas que asistieron: ");
         archivoInforme.escribirLista(informacionAsistencia);
         archivoInforme.escribirLista(listaNotas);
     }
