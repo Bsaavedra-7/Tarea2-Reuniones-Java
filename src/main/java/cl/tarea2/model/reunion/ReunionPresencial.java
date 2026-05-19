@@ -9,4 +9,17 @@ public class ReunionPresencial extends Reunion {
         super(tipoReunion, fecha, hora, duracionPrevista, organizador);
         this.sala = sala;
     }
+
+    public String getSala() {
+        return this.sala;
+    }
+
+    public void setSala(String sala) {
+        this.sala = sala;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSala: " + this.sala;
+    }
 }
