@@ -24,6 +24,8 @@ public class Informe {
     private String horaFin;
     private String nombreReunion;
     private String duracionPrevista;
+    private String tipoReunion;
+
     private ManejarArchivos archivoInforme;
     private List<String> informacionAsistencia;
     private List<String> listaNotas;
@@ -42,6 +44,7 @@ public class Informe {
         horaFin = String.valueOf(ref.obtenerHoraFin());
         fecha = String.valueOf(ref.obtenerFecha());
         duracionPrevista = String.valueOf(ref.getDuracionPrevista());
+        tipoReunion = String.valueOf(ref.getTipoReunion());
 
         this.nombreReunion = nombreReunion;
 
@@ -84,6 +87,8 @@ public class Informe {
     }
 
     public void escribirInforme(){
+        archivoInforme.escribir("La reunion es de tipo: " + tipoReunion);
+
         archivoInforme.escribir("1.- Datos relacionados a la fecha y hora de la reunion.");
         archivoInforme.escribir("");//Salto de linea
 
