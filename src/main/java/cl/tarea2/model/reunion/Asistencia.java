@@ -21,6 +21,7 @@ public class Asistencia {
     public void setParticipante(Participante participante){
         this.participante = participante;
     }
+    @Override
     public String toString(){
         if(this.retraso == null) {
             return "Asistencia de "+this.participante.getNombreCompleto();

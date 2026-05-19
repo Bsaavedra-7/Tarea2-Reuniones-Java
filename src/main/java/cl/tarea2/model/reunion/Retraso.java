@@ -12,6 +12,7 @@ public class Retraso {
     public void setHora(LocalTime hora){
         this.hora = hora;
     }
+    @Override
     public String toString(){
         return "Retraso de "+this.hora.toString();
     }
