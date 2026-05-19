@@ -61,6 +61,62 @@ public abstract class Reunion {
         return this.horaFin;
     }
 
+    public TipoReunion getTipoReunion() {
+        return this.tipoReunion;
+    }
+
+    public Empleado getOrganizador() {
+        return this.organizador;
+    }
+
+    public int getDuracionPrevista() {
+        return this.duracionPrevista;
+    }
+
+    public List<Invitacion> getInvitados() {
+        return this.invitados;
+    }
+
+    public List<Asistencia> getAsistentes() {
+        return this.asistentes;
+    }
+
+    public List<Nota> getNotas() {
+        return this.notas;
+    }
+
+    public void setTipoReunion(TipoReunion tipoReunion) {
+        this.tipoReunion = tipoReunion;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+
+    public void setOrganizador(Empleado organizador) {
+        this.organizador = organizador;
+    }
+
+    public void setDuracionPrevista(int duracionPrevista) {
+        this.duracionPrevista = duracionPrevista;
+    }
+
+    public void setInvitados(List<Invitacion> invitados) {
+        this.invitados = invitados;
+    }
+
+    public void setAsistentes(List<Asistencia> asistentes) {
+        this.asistentes = asistentes;
+    }
+
+    public void setNotas(List<Nota> notas) {
+        this.notas = notas;
+    }
+
     public List<Asistencia> obtenerAsistentes() {
         return asistentes;
     }
@@ -104,7 +160,13 @@ public abstract class Reunion {
     }
 
     public float obtenerPorcentajeAsistencia() {
+        if (asistentes.isEmpty()) {
+            return 0;
+        }
+        else
+        {
         return (float) asistentes.size() / (float) invitados.size() * 100;
+        }
     }
 
     @Override
